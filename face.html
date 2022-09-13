@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Face recognition App</title>
+    <style type="text/css">
+      body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background: #2f2f2f;
+  width: calc(100% - 33px);
+}
+
+canvas {
+  position: absolute;
+}
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.result-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result-container > div {
+  font-size: 1.3rem;
+  padding: 0.5rem;
+  margin: 5px 0;
+  color: white;
+  text-transform: capitalize;
+}
+#age {
+  background: #1e94be;
+}
+#emotion {
+  background: #8a1025;
+}
+#gender {
+  background: #62d8a5;
+}
+video {
+  width: 100%;
+}
+header {
+  background: #42a5f5;
+  color: white;
+  width: 100%;
+  font-size: 2rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
+    </style>
+  </head>
+  <body>
+    <header style="text-align: center;">Device Camera</header>
+    <div class="container">
+      <video id="video" height="500" width="500" autoplay muted></video>
+    </div>
+    <div class="result-container">
+      <div id="emotion">Emotion</div>
+    </div>
+       <form method="get">
+          <input type="hidden" name="faceExpName" id="faceExpName">
+          <!--<input type="submit" name="submit" id="submit">-->
+        </form>
+    <script src="./js/prakher-face.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
